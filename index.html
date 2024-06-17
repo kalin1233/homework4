@@ -1,0 +1,60 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Kalin Toussaint, UMass Lowell Computer Science, Kalin_Toussaint@student.uml.edu
+Copyright (c) 2024 by Kalin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by KT on June 17, 2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+<!-- Main container for the content -->
+<div class="container">
+    <!-- Welcome message -->
+    <header>
+        <h1>Welcome to My Multiplication Table</h1>
+        <p>Please enter four numbers below from -50 to 50</p>
+    </header>
+
+    <!-- Heading of the application -->
+    <h2>Multiplication Table Generator</h2>
+
+    <!-- Container for the form elements -->
+    <div class="form-container">
+        <!-- Form to take user inputs for generating the table -->
+        <form id="multiplication-form">
+            <label for="start-horizontal">Start Horizontal Numbers:</label>
+            <input type="number" id="start-horizontal" name="start-horizontal" placeholder="Enter a number from -50 to 50" required>
+
+            <label for="end-horizontal">End Horizontal Numbers:</label>
+            <input type="number" id="end-horizontal" name="end-horizontal" placeholder="Enter a number from -50 to 50" required>
+
+            <label for="start-vertical">Start Vertical Numbers:</label>
+            <input type="number" id="start-vertical" name="start-vertical" placeholder="Enter a number from -50 to 50" required>
+
+            <label for="end-vertical">End Vertical Numbers:</label>
+            <input type="number" id="end-vertical" name="end-vertical" placeholder="Enter a number from -50 to 50" required>
+
+            <!-- Button to submit the form and generate the table -->
+            <button type="submit">Generate Table</button>
+        </form>
+    </div>
+
+    <!-- Container to display the generated table -->
+    <div class="table-container" id="output"></div>
+</div>
+
+<!-- JavaScript file to handle form submission and table generation -->
+<script src="index.js"></script>
+</body>
+</html>
